@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DTEmpire - Documentation</title>
+    
+    <!-- CSS & Fonts -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="image/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png">
+    <link rel="manifest" href="image/site.webmanifest">
+    
+    <!-- Theme Color for Mobile -->
+    <meta name="theme-color" content="#0a0a0a">
+    
+    <!-- Apple iOS Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="DTEmpire Status">
+    
+    <!-- Microsoft Tile Color -->
+    <meta name="msapplication-TileColor" content="#003b00">
+    
+    <!-- Inline Favicon Fallback -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%2300ff41%22>DT</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="logo-section">
+                <div class="logo">
+                    <i class="fas fa-terminal"></i>
+                    <h1>DTEmpire</h1>
+                </div>
+                <div class="tagline">Documentation</div>
+            </div>
+
+            <div class="nav-section">
+                <h3><i class="fas fa-home"></i> Main</h3>
+                <ul>
+                    <li><a href="#home" id="nav-home"><i class="fas fa-house-user"></i> Home</a></li>
+                    <li><a href="#status" id="nav-status"><i class="fas fa-server"></i> Live Status</a></li>
+                    <li><a href="#discord" id="nav-discord"><i class="fab fa-discord"></i> Discord</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-section">
+                <h3><i class="fas fa-book"></i> Documentation</h3>
+                <ul>
+                    <li><a href="#lavalink" id="nav-lavalink"><i class="fas fa-music"></i> Lavalink v4</a></li>
+                    <li><a href="#music-bot" id="nav-music-bot"><i class="fas fa-robot"></i> Music Bot</a></li>
+                    <li><a href="#image-api" id="nav-image-api"><i class="fas fa-image"></i> Image Gen API</a></li>
+                    <li><a href="#game-servers" id="nav-game-servers"><i class="fas fa-gamepad"></i> Game Servers</a></li>
+                    <li><a href="#websites" id="nav-websites"><i class="fas fa-globe"></i> Websites</a></li>
+                    <li><a href="#api" id="nav-api"><i class="fas fa-code"></i> API Documentation</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-section">
+                <h3><i class="fas fa-download"></i> Resources</h3>
+                <ul>
+                    <li><a href="#dtempire-bot" id="nav-dtempire-bot"><i class="fas fa-robot"></i> DTEmpire Bot</a></li>
+                    <li><a href="#invite" id="nav-invite"><i class="fas fa-user-plus"></i> Invite Bot</a></li>
+                    <li><a href="#github" id="nav-github"><i class="fab fa-github"></i> GitHub</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="status-indicator">
+                    <div class="status-dot online"></div>
+                    <span>All Systems Operational</span>
+                </div>
+                <div class="server-time" id="server-time">00:00:00 UTC</div>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="content">
+            <header class="content-header">
+                <div class="breadcrumb">
+                    <span id="breadcrumb">Home / Introduction</span>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-hack" onclick="toggleTheme()">
+                        <i class="fas fa-palette"></i> Theme
+                    </button>
+                    <button class="btn btn-hack" onclick="toggleTerminal()">
+                        <i class="fas fa-terminal"></i> Terminal
+                    </button>
+                </div>
+            </header>
+
+            <div class="content-body" id="content-body">
+                <!-- Content will be loaded here by JavaScript -->
+            </div>
+        </main>
+
+        <!-- Terminal Panel -->
+        <div class="terminal" id="terminal">
+            <div class="terminal-header">
+                <div class="terminal-title">
+                    <i class="fas fa-terminal"></i> System Terminal
+                </div>
+                <button class="terminal-close" onclick="toggleTerminal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="terminal-body">
+                <div class="terminal-output" id="terminal-output">
+                    <div class="terminal-line">DTEmpire System Terminal v2.0.1</div>
+                    <div class="terminal-line">Initializing connection...</div>
+                    <div class="terminal-line">Connected to main server.</div>
+                    <div class="terminal-line">Type 'help' for available commands.</div>
+                </div>
+                <div class="terminal-input">
+                    <span class="prompt">dtempire@docs:~$</span>
+                    <input type="text" id="terminal-input" placeholder="Type command...">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
